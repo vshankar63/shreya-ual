@@ -7,10 +7,10 @@
   --surface: #ffffff;
   --text: #1c1a18;
   --text-muted: #6b6860;
-  --accent: #2a7a52;
-  --accent-hover: #1d5c3d;
-  --accent-light: rgba(42, 122, 82, 0.07);
-  --accent-border: rgba(42, 122, 82, 0.22);
+  --accent: #b5760a;
+  --accent-hover: #8f5c08;
+  --accent-light: rgba(181, 118, 10, 0.07);
+  --accent-border: rgba(181, 118, 10, 0.22);
   --border: rgba(0, 0, 0, 0.1);
   --todo-bg: #fff8e1;
   --todo-border: #e6b800;
@@ -693,8 +693,8 @@ main {
   height: 3px;
   border-radius: 16px 16px 0 0;
 }
-.days-phase:nth-child(1)::before { background: #b7e4c7; }
-.days-phase:nth-child(2)::before { background: #95d5b2; }
+.days-phase:nth-child(1)::before { background: #e8c46a; }
+.days-phase:nth-child(2)::before { background: #d4960f; }
 .days-phase:nth-child(3)::before { background: var(--accent); }
 
 .days-range {
@@ -705,8 +705,8 @@ main {
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
-.days-phase:nth-child(1) .days-range { color: #b7e4c7; }
-.days-phase:nth-child(2) .days-range { color: #95d5b2; }
+.days-phase:nth-child(1) .days-range { color: #c8900e; }
+.days-phase:nth-child(2) .days-range { color: #b5760a; }
 .days-phase:nth-child(3) .days-range { color: var(--accent); }
 
 .days-phase h3 { font-size: 1.5rem; margin-bottom: 1rem; }
