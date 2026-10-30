@@ -73,6 +73,34 @@ document.querySelectorAll('dialog').forEach(dialog => {
 });
 
 // ============================================================
+// SCROLL FADE-IN ANIMATION
+// ============================================================
+if ('IntersectionObserver' in window &&
+    window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+
+  const fadeTargets = document.querySelectorAll(
+    '.section-header, .story-block, .north-star, ' +
+    '.serves-list, .barriers, .hypothesis-note, ' +
+    '.bring-block, .part-label, .criteria-grid, ' +
+    '.systems-strip, .days-phase, .work-card, ' +
+    '.contact-list, .section-intro'
+  );
+
+  fadeTargets.forEach(el => el.classList.add('fi'));
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('vis');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+
+  document.querySelectorAll('.fi').forEach(el => io.observe(el));
+}
+
+// ============================================================
 // SMOOTH SCROLL FOR CHIP ↔ CRITERION CARD LINKS
 // Highlight the target card briefly so the user can spot it
 // ============================================================
